@@ -6,3 +6,5 @@ The website also has a filter button where the user can change the order of how 
 The website uses the ISBN to find the book cover using Open Library Covers API and returns it.
 
 Use npm i to install all packages, there's axios, ejs, body-parser, express and pg.
+
+You can get the program running by executing nodemon index.js in the terminal
