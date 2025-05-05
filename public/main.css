@@ -1,0 +1,140 @@
+html {
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 30px;
+}
+#intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70vw;
+  margin: 0px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Fredoka", sans-serif;
+  color: #5b2333;
+}
+
+.filter-button {
+  margin-top: 60px;
+}
+
+#filter {
+  border: 0;
+  border-bottom: 2px solid #5b2333;
+  background: whitesmoke;
+}
+.reason {
+  font-size: 20px;
+}
+
+li {
+  list-style: none;
+  margin: 30px 0px 30px 0px;
+}
+
+.contain {
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto 0px auto;
+  width: 70vw;
+}
+
+.title > h5 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.interest {
+  margin-top: 10px;
+}
+
+.date {
+  margin: 10px 0px 20px 0px;
+  font-size: 12px;
+  color: #686868;
+}
+
+#submit {
+  width: 70vw;
+  display: flex;
+  margin: 10px auto;
+  flex-direction: column;
+}
+
+.isbn-input {
+  border: 0;
+  border-bottom: 2px solid #5b2333;
+  background: whitesmoke;
+  margin-right: 20px;
+}
+
+.title-input {
+  border: 0;
+  border-bottom: 2px solid #5b2333;
+  width: 270px;
+  background: whitesmoke;
+  margin-right: 20px;
+}
+
+.interest-num {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#textBox {
+  width: 550px;
+  height: 300px;
+  border: 2px solid #5b2333;
+}
+
+#interest {
+  width: 40px;
+  margin-bottom: 20px;
+  border: 0;
+  border-bottom: 2px solid #5b2333;
+  background: whitesmoke;
+}
+
+button {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #5b2333;
+  color: whitesmoke;
+  border: 0px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #8c3950;
+}
+
+footer {
+  width: 100vw;
+  background-color: #5b2333;
+  color: whitesmoke;
+  height: 40px;
+  text-align: center;
+  font-size: 12px;
+  align-items: center;
+  padding-top: 25px;
+}

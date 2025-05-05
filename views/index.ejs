@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books to Read</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="intro">
+      <div id="container">
+        <h1>Richie Lucius</h1>
+        <h3>Books I'd Like To Read</h3>
+      </div>
+      <div class="filter-button">
+        <form action="/filter" method="post">
+          <select name="filter" id="filter">
+            <option value="default">Default</option>
+            <option value="ratingUp">Rating Ascending</option>
+            <option value="ratingDown">Rating Descending</option>
+            <option value="recent">Most Recent</option>
+            <option value="older">Older</option>
+          </select>
+
+          <button type="submit">Filter</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="books">
+      <div id="books-container">
+        <%if (locals.books){%> <% locals.books.forEach((book)=>{%>
+        <li class="contain">
+          <div class="wrapper">
+            <img
+              class="pic"
+              src="data:image/jpeg;base64,<%=book.cover.toString('base64')%>"
+              alt="<%=book.title%> cover"
+            />
+            <div class="title">
+              <h5>Title:</h5>
+              <div class="title-text"><%=book.title%></div>
+            </div>
+            <div class="info-wrapper">
+              <div>
+                <h4 class="reason">Why I'm interested:</h4>
+                <%=book.why%>
+              </div>
+              <div class="interest">
+                How interested I am to read: <%=book.interest%>/5
+              </div>
+              <div class="date">
+                <strong>Date added: <%=book.date_added%></strong>
+              </div>
+            </div>
+          </div>
+        </li>
+        <%});%> <%}%>
+      </div>
+    </section>
+
+    <section id="submit">
+      <div class="form-title">
+        <h3>Suggest a book for me to read</h3>
+      </div>
+
+      <form id="form" action="/add" method="post">
+        <div class="text-inputs">
+          <label for="isbn">ISBN:</label>
+          <input type="text" name="isbn" class="isbn-input" />
+          <label for="title">Title:</label>
+          <input type="text" name="title" class="title-input" />
+        </div>
+
+        <div class="interest-num">
+          <label for="why">Reason:</label>
+          <textarea name="why" id="textBox"></textarea>
+          <label for="why">Interest:</label>
+          <select name="interest" id="interest">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <button type="submit">Add</button>
+      </form>
+    </section>
+    <footer><div class="copy">All Rights Reserved.</div></footer>
+  </body>
+</html>
