@@ -4,3 +4,5 @@ the rating/how interested I am in reading it and then the date and time it was a
 and displayed for me to see. 
 The website also has a filter button where the user can change the order of how the books are displayed.
 The website uses the ISBN to find the book cover using Open Library Covers API and returns it.
+
+Use npm i to install all packages, there's axios, ejs, body-parser, express and pg.
